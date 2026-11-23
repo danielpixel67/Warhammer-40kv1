@@ -1,0 +1,367 @@
+
+/* =====================================
+   EXPLORADOR GENERAL
+===================================== */
+
+.explorer-page {
+    --theme-color: #c4a45a;
+    --theme-light: #e0c98d;
+    --theme-background: #17191d;
+}
+
+.explorer-container {
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+
+.explorer-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.explorer-heading h1 {
+    font-size: clamp(27px, 5vw, 45px);
+    color: #f0eee7;
+    letter-spacing: 2px;
+}
+
+.explorer-heading > p:last-child {
+    color: #aaa;
+    margin-top: 12px;
+}
+
+
+/* =====================================
+   SELECCIÓN DE ALIANZA
+===================================== */
+
+.alliance-section {
+    margin-bottom: 70px;
+}
+
+.alliance-section h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.alliance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.alliance-button {
+    min-height: 180px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #24272d;
+    border: 2px solid #45413a;
+    color: white;
+    cursor: pointer;
+}
+
+.alliance-icon {
+    font-size: 45px;
+}
+
+.alliance-button strong {
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.alliance-button small {
+    color: #aaa;
+}
+
+.imperial-button.selected {
+    background-color: #393326;
+    border-color: #c4a45a;
+}
+
+.imperial-button .alliance-icon {
+    color: #d5b76b;
+}
+
+.chaos-button.selected {
+    background-color: #351a1d;
+    border-color: #a7373d;
+}
+
+.chaos-button .alliance-icon {
+    color: #c34c52;
+}
+
+
+/* =====================================
+   CATÁLOGO
+===================================== */
+
+.catalog-section {
+    scroll-margin-top: 30px;
+}
+
+.catalog-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.catalog-heading h2 {
+    font-size: 25px;
+}
+
+.catalog-heading > span {
+    color: var(--theme-color);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   BUSCADOR
+===================================== */
+
+.search-container {
+    margin-bottom: 30px;
+}
+
+.search-container label {
+    display: block;
+    color: var(--theme-light);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 15px;
+    background-color: #25292f;
+    color: white;
+    border: 1px solid #494949;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-container input:focus {
+    border-color: var(--theme-color);
+}
+
+
+/* =====================================
+   TARJETAS DE FACCIONES
+===================================== */
+
+.faction-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.faction-item {
+    background-color: #24272d;
+    border: 1px solid #45413a;
+    overflow: hidden;
+}
+
+.faction-art {
+    height: 170px;
+    background-color: #30343b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-bottom: 1px solid #45413a;
+}
+
+.faction-art span {
+    font-size: 65px;
+    color: var(--theme-light);
+}
+
+.faction-art small {
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+.faction-info {
+    padding: 22px;
+}
+
+.faction-tag {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--theme-color);
+}
+
+.faction-info h3 {
+    font-size: 21px;
+    margin: 8px 0 12px;
+}
+
+.faction-info > p {
+    color: #bcbcbc;
+    font-size: 14px;
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   DETALLES DE CADA FACCIÓN
+===================================== */
+
+.faction-details {
+    border-top: 1px solid #45413a;
+    padding-top: 15px;
+}
+
+.faction-details summary {
+    color: var(--theme-light);
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.details-content {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #191c20;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.details-content strong {
+    color: var(--theme-light);
+}
+
+
+/* =====================================
+   TEMA IMPERIAL
+===================================== */
+
+.theme-imperio {
+    --theme-color: #c9a653;
+    --theme-light: #ead49b;
+    background-color: #211f19;
+}
+
+.theme-imperio .faction-item {
+    border-color: #78643c;
+}
+
+.theme-imperio .faction-art {
+    background-color: #353023;
+}
+
+.theme-imperio .alliance-section h2,
+.theme-imperio .catalog-heading h2 {
+    color: #ead49b;
+}
+
+
+/* =====================================
+   TEMA CAOS
+===================================== */
+
+.theme-caos {
+    --theme-color: #c3484d;
+    --theme-light: #e47b7b;
+    background-color: #1c1518;
+}
+
+.theme-caos .faction-item {
+    border-color: #713035;
+}
+
+.theme-caos .faction-art {
+    background-color: #351d21;
+}
+
+.theme-caos .alliance-section h2,
+.theme-caos .catalog-heading h2 {
+    color: #e47b7b;
+}
+
+
+/* =====================================
+   SIN RESULTADOS
+===================================== */
+
+.empty-message {
+    text-align: center;
+    padding: 35px;
+    color: #aaa;
+    border: 1px dashed #555;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .faction-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .explorer-container {
+        padding-top: 40px;
+    }
+
+    .alliance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faction-list {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .back-link {
+        font-size: 11px;
+    }
+
+}
+/* IMÁGENES DE LAS TARJETAS */
+
+.faction-art {
+    position: relative;
+    overflow: hidden;
+}
+
+.faction-art img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.faction-art small {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 6px 10px;
+    color: white;
+}

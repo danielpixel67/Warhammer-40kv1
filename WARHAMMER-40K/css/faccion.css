@@ -1,0 +1,247 @@
+/* CONTENEDOR GENERAL */
+
+.wiki-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.wiki-header {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.wiki-header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.wiki-header a,
+.back-link {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* PRESENTACIÓN */
+
+.wiki-hero {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #555;
+}
+
+.wiki-alliance {
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.wiki-hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.wiki-hero h3 {
+    color: #ccc;
+}
+
+.wiki-image-placeholder {
+    width: 100%;
+    max-width: 700px;
+    min-height: 250px;
+    margin: 30px auto;
+    background: #222;
+    border: 1px dashed #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+}
+
+/* INFORMACIÓN */
+
+.wiki-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.wiki-section {
+    background: #202020;
+    padding: 25px;
+    border: 1px solid #444;
+}
+
+.wiki-section h2 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #777;
+}
+
+.wiki-section p {
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* TEMA IMPERIO */
+
+.theme-imperio {
+    background: #171714;
+    color: #eee6d0;
+}
+
+.theme-imperio .wiki-alliance,
+.theme-imperio .wiki-section h2 {
+    color: #c5a45a;
+}
+
+/* TEMA CAOS */
+
+.theme-caos {
+    background: #130b0b;
+    color: #eee;
+}
+
+.theme-caos .wiki-alliance,
+.theme-caos .wiki-section h2 {
+    color: #c43b3b;
+}
+
+.theme-caos .wiki-section {
+    background: #241313;
+    border-color: #612222;
+}
+
+/* PIE DE PÁGINA */
+
+.wiki-footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    border-top: 1px solid #444;
+    color: #999;
+}
+
+/* MÓVILES */
+
+@media (max-width: 650px) {
+
+    .wiki-content {
+        grid-template-columns: 1fr;
+    }
+
+    .wiki-hero h1 {
+        font-size: 30px;
+    }
+
+    .wiki-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* IMAGEN PRINCIPAL DE LA WIKI */
+
+.wiki-main-image {
+    display: block;
+    width: 85%;
+    max-width: 800px;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    margin: 30px auto;
+    border: 2px solid #777;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+/* GALERÍA DE IMÁGENES */
+
+.wiki-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.wiki-gallery figure {
+    margin: 0;
+    min-width: 0;
+    background: #151515;
+    border: 1px solid #555;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.wiki-gallery img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.gallery-section {
+    grid-column: 1 / -1;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 650px) {
+
+    .wiki-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .wiki-gallery img {
+        height: 220px;
+    }
+
+}
+
+
+/* FICHAS DE PERSONAJES, ARMAMENTO Y BATALLAS */
+
+.wiki-item {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+}
+
+.wiki-item:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.wiki-item img {
+    display: block;
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+.wiki-item h4 {
+    margin-bottom: 6px;
+}
+
+.wiki-text p + p {
+    margin-top: 12px;
+}
+
+.wiki-empty {
+    font-style: italic;
+    color: #888;
+}

@@ -1,0 +1,1203 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #101010;
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* ==============================
+   ENCABEZADO
+============================== */
+
+.card-header {
+    background: linear-gradient(135deg, #1c1c1c, #080808);
+    border-bottom: 2px solid #a88742;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.card-header h1 {
+    color: #d4af55;
+    font-size: 42px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.card-header p {
+    color: #bbbbbb;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.card-header a {
+    color: #d4af55;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.card-header a:hover {
+    color: white;
+}
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+============================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* ==============================
+   PRESENTACIÓN DEL JUEGO
+============================== */
+
+.game-intro {
+    background-color: #1b1b1b;
+    border: 1px solid #555;
+    border-top: 3px solid #a88742;
+    border-radius: 8px;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.game-intro h2 {
+    color: #d4af55;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.game-intro p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.game-intro button {
+    background-color: #a88742;
+    color: #111111;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.game-intro button:hover {
+    background-color: #d4af55;
+}
+
+/* ==============================
+   ESPACIOS DEL JUEGO
+============================== */
+
+#factionSelection,
+#battleField {
+    margin-top: 35px;
+}
+
+/* ==============================
+   PIE DE PÁGINA
+============================== */
+
+footer {
+    border-top: 1px solid #444;
+    color: #888888;
+    padding: 25px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ==============================
+   DISEÑO RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+
+    .card-header h1 {
+        font-size: 30px;
+    }
+
+    .card-header p {
+        font-size: 11px;
+    }
+
+    main {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .game-intro {
+        padding: 30px 15px;
+    }
+
+    .game-intro h2 {
+        font-size: 22px;
+    }
+}
+
+/* ==============================
+   SELECCIÓN DE FACCIONES
+============================== */
+
+.selection-container {
+    background-color: #1b1b1b;
+    border: 1px solid #66552f;
+    border-radius: 8px;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.selection-container h2 {
+    color: #d4af55;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.selection-description {
+    color: #bbbbbb;
+    margin-bottom: 30px;
+}
+
+.players-selection {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.player-selection {
+    background-color: #111111;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 25px 15px;
+}
+
+.player-selection h3 {
+    color: #d4af55;
+    margin-bottom: 20px;
+}
+
+.player-selection label {
+    display: block;
+    color: #cccccc;
+    margin-bottom: 12px;
+}
+
+.player-selection select {
+    width: 100%;
+    padding: 12px;
+    background-color: #292929;
+    color: white;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#confirmFactionsButton {
+    background-color: #a88742;
+    color: #111111;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#confirmFactionsButton:hover {
+    background-color: #d4af55;
+}
+
+.selection-error {
+    color: #ff6666;
+    margin-bottom: 18px;
+}
+
+.selection-success {
+    color: #8bd68b;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 650px) {
+
+    .players-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .selection-container {
+        padding: 25px 15px;
+    }
+
+    .selection-container h2 {
+        font-size: 22px;
+    }
+}
+
+/* ==============================
+   CAMPEONES DE LAS FACCIONES
+============================== */
+
+.champion-preview {
+    margin-top: 22px;
+    padding: 15px;
+    background-color: #1b1b1b;
+    border: 1px solid #66552f;
+    border-radius: 8px;
+    min-height: 190px;
+}
+
+.champion-preview img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.champion-preview h4 {
+    color: #d4af55;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.champion-preview p {
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+/* ==============================
+   EJÉRCITOS Y PERSONAJES
+============================== */
+
+.battle-title {
+    color: #d4af55;
+    text-align: center;
+    margin: 35px 0;
+}
+
+.armies-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.army {
+    background-color: #1b1b1b;
+    border: 1px solid #66552f;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 0;
+}
+
+.army h3 {
+    color: #d4af55;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.army h4 {
+    color: #cccccc;
+    margin: 20px 0 12px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 8px;
+}
+
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.character-card {
+    background-color: #101010;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+    min-width: 0;
+    transition: transform 0.15s, outline-color 0.15s;
+}
+
+.character-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Nombre del personaje (h4 en el JS nuevo; h5 por compatibilidad) */
+.character-card h4,
+.character-card h5,
+.battle-player .character-card h4,
+.army .character-card h4 {
+    color: #d4af55;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 0;
+    border: none;
+    line-height: 1.3;
+}
+
+.character-card p {
+    color: #cccccc;
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.character-placeholder {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    background-color: #202020;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.champion-label {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 9px;
+    background-color: #66552f;
+    color: white;
+    font-size: 11px;
+    border-radius: 4px;
+}
+
+/* ==============================
+   BARRA DE VIDA
+============================== */
+
+.health-bar {
+    height: 8px;
+    background-color: #400;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 4px 0 8px;
+}
+
+.health-fill {
+    height: 100%;
+    background-color: #3cb83c;
+    transition: width 0.3s;
+}
+
+@media (max-width: 750px) {
+    .armies-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .character-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==============================
+   PREPARACIÓN PRIVADA
+============================== */
+
+.private-preparation,
+.handoff-screen {
+    background-color: #1b1b1b;
+    border: 1px solid #a88742;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.private-preparation h2,
+.handoff-screen h2 {
+    color: #d4af55;
+    margin-bottom: 20px;
+}
+
+.private-preparation h3 {
+    color: #d4af55;
+    margin: 30px 0 15px;
+}
+
+.private-warning {
+    color: #e5a34c;
+    margin: 25px 0;
+}
+
+#readyPlayerButton,
+#nextPlayerButton,
+#beginTurnButton,
+#restartButton {
+    background-color: #a88742;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#readyPlayerButton:hover,
+#nextPlayerButton:hover,
+#beginTurnButton:hover,
+#restartButton:hover {
+    background-color: #d4af55;
+}
+
+/* ==============================
+   CAMPO DE BATALLA
+============================== */
+
+.battle-screen {
+    background-color: #151515;
+    border: 1px solid #66552f;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.battle-screen > h2 {
+    color: #d4af55;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.turn-indicator {
+    background-color: #292929;
+    border: 1px solid #a88742;
+    color: #d4af55;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.battle-instruction {
+    text-align: center;
+    color: #eeeeee;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.combat-message {
+    color: #d4af55;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.battle-armies {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.battle-player {
+    background-color: #202020;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 18px;
+    min-width: 0;
+}
+
+.battle-player h3 {
+    color: #d4af55;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.battle-player > p {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.battle-player h4 {
+    color: #ddd;
+    margin: 20px 0 12px;
+}
+
+.reserve-counter {
+    color: #d4af55 !important;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+/* ==============================
+   ACCIONES DE COMBATE
+============================== */
+
+.battle-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.battle-actions button {
+    margin: 5px 6px;
+}
+
+#confirmAttackersButton {
+    background-color: #a88742;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#confirmAttackersButton:hover:not(:disabled) {
+    background-color: #d4af55;
+}
+
+#confirmAttackersButton:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+#endTurnButton {
+    background-color: #a83232;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#endTurnButton:hover {
+    background-color: #cc4444;
+}
+
+/* ==============================
+   CARTAS INTERACTIVAS
+============================== */
+
+/* Mis personajes (elegir atacantes) y enemigos (elegir objetivo) */
+.character-card.selectable,
+.character-card.targetable {
+    cursor: pointer;
+}
+
+.character-card.selectable:hover,
+.character-card.targetable:hover {
+    transform: translateY(-4px);
+}
+
+/* Atacante elegido */
+.character-card.selected {
+    outline: 3px solid #d4af55;
+    outline-offset: 2px;
+}
+
+/* Atacante que está actuando ahora */
+.character-card.attacking {
+    outline: 3px solid #3cb83c;
+    outline-offset: 2px;
+}
+
+/* Objetivo enemigo */
+.character-card.targetable:hover {
+    outline: 3px solid #cc4444;
+    outline-offset: 2px;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 750px) {
+
+    .battle-armies {
+        grid-template-columns: 1fr;
+    }
+
+    .battle-screen {
+        padding: 15px;
+    }
+
+}
+
+/* ==============================
+   CAMPO DE BATALLA CARA A CARA
+   (enemigo arriba, jugador del turno abajo)
+============================== */
+
+.battle-side {
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.enemy-side {
+    border: 1px solid #8a3030;
+}
+
+.player-side {
+    border: 1px solid #a88742;
+}
+
+.side-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #cccccc;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.enemy-side .side-header {
+    margin-bottom: 10px;
+}
+
+.player-side .side-header {
+    margin-top: 10px;
+}
+
+/* La reserva ahora va en la cabecera, sin la línea de antes */
+.side-header .reserve-counter {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Siempre 3 cartas por fila, una al lado de otra */
+.battle-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.battle-row .character-card {
+    padding: 8px;
+}
+
+.battle-row .character-card img,
+.battle-row .character-placeholder {
+    height: 90px;
+    margin-bottom: 6px;
+}
+
+.battle-row .character-card p {
+    margin: 4px 0;
+    font-size: 12px;
+}
+
+.battle-row .champion-label {
+    margin-top: 6px;
+    font-size: 10px;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    color: #cccccc;
+    font-size: 13px;
+}
+
+/* Franja central: instrucciones, mensajes y botones */
+.battle-center {
+    text-align: center;
+    padding: 14px 10px;
+}
+
+.battle-center .battle-instruction {
+    margin-bottom: 8px;
+}
+
+.battle-center .combat-message {
+    margin: 0 0 8px;
+    font-size: 14px;
+}
+
+.battle-center .battle-actions {
+    margin-top: 10px;
+}
+
+.battle-screen .turn-indicator {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 750px) {
+
+    .battle-row {
+        gap: 6px;
+    }
+
+    .battle-row .character-card img,
+    .battle-row .character-placeholder {
+        height: 70px;
+    }
+
+    .battle-row .character-card h4 {
+        font-size: 11px;
+    }
+
+    .battle-row .character-card p,
+    .card-stats {
+        font-size: 11px;
+    }
+
+    .side-header {
+        font-size: 11px;
+    }
+}
+
+/* Anula la regla de 1 columna para pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .battle-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ==============================
+   DISEÑO DE LA CARTA
+   vida: arriba derecha · defensa: abajo izquierda · daño: abajo derecha
+============================== */
+
+.character-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-art {
+    position: relative;
+}
+
+.card-art img,
+.card-art .character-placeholder {
+    margin-bottom: 8px;
+}
+
+/* Insignias de estadísticas */
+.stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 9px;
+    border-radius: 14px;
+    border: 2px solid #d4af55;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+}
+
+/* Vida: esquina superior derecha */
+.stat-life {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: #a83232;
+}
+
+.stat-life.low {
+    background-color: #5a0f0f;
+    border-color: #ff6666;
+}
+
+/* Pie: defensa a la izquierda, daño a la derecha */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+    padding-top: 6px;
+}
+
+.stat-def {
+    background-color: #35588f;
+}
+
+.stat-dmg {
+    background-color: #b8691b;
+}
+
+.card-footer .champion-label {
+    margin: 0;
+}
+
+@media (max-width: 750px) {
+    .stat {
+        padding: 2px 6px;
+        font-size: 11px;
+    }
+
+    .card-footer .champion-label {
+        display: none;
+    }
+}
+
+
+/* ==============================
+   RENDICIÓN Y PANTALLA DE VICTORIA
+============================== */
+
+#surrenderButton {
+    background-color: #2b2b2b;
+    color: #cccccc;
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#surrenderButton:hover {
+    background-color: #444;
+    color: white;
+}
+
+.victory-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    max-height: 350px;
+    object-fit: contain;
+    margin: 20px auto;
+    border: 2px solid #a88742;
+    border-radius: 8px;
+}
+
+
+/* ==============================
+   HABILIDADES, PASIVAS Y SELLOS
+============================== */
+
+.card-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 4px 0 6px;
+    min-height: 18px;
+}
+
+.tag {
+    display: block;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.3;
+    cursor: help;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tag-skill {
+    background-color: #3a2c52;
+    border: 1px solid #8f6fd0;
+    color: #e3d6ff;
+}
+
+.tag-skill.used {
+    opacity: 0.45;
+    text-decoration: line-through;
+}
+
+.tag-passive {
+    background-color: #1f3b2a;
+    border: 1px solid #4fa36b;
+    color: #cdf5da;
+}
+
+/* Personaje sellado */
+.character-card.sealed {
+    outline: 3px solid #4aa3d8;
+    outline-offset: 2px;
+}
+
+.character-card.sealed .card-art img,
+.character-card.sealed .character-placeholder {
+    filter: grayscale(0.8) brightness(0.7);
+}
+
+.seal-badge {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: #1d4b69;
+    border: 2px solid #4aa3d8;
+    border-radius: 14px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Elegir un aliado como objetivo (curación) */
+.character-card.ally-targetable {
+    cursor: pointer;
+}
+
+.character-card.ally-targetable:hover {
+    transform: translateY(-4px);
+    outline: 3px solid #3cb83c;
+    outline-offset: 2px;
+}
+
+/* Botones de acción en el ataque */
+#normalAttackButton,
+#abilityButton,
+#confirmAreaButton {
+    background-color: #2b2b2b;
+    color: #eeeeee;
+    border: 1px solid #a88742;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#normalAttackButton.active,
+#abilityButton.active {
+    background-color: #a88742;
+    color: #111111;
+}
+
+#abilityButton {
+    border-color: #8f6fd0;
+}
+
+#abilityButton.active {
+    background-color: #8f6fd0;
+    color: white;
+}
+
+#confirmAreaButton {
+    background-color: #8f6fd0;
+    color: white;
+    border-color: #c7b2ff;
+}
+
+.champion-skill {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #cccccc;
+    text-align: left;
+}
+
+@media (max-width: 750px) {
+
+    .tag {
+        font-size: 9px;
+        padding: 1px 4px;
+    }
+
+    .seal-badge {
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+}
+
+
+/* ==============================
+   CARTAS CON LA IMAGEN COMO PROTAGONISTA
+   vida: arriba derecha · defensa: abajo izquierda · daño: abajo derecha
+============================== */
+
+.character-card {
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid #a88742;
+    border-radius: 10px;
+    background-color: #0c0c0c;
+}
+
+.character-card .card-art {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 35%, #3a3326, #121212 75%);
+}
+
+/* La imagen llena toda la carta */
+.character-card .card-art img,
+.battle-row .character-card .card-art img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+/* Sin imagen: fondo con un símbolo */
+.character-card .card-art .character-placeholder,
+.battle-row .character-card .card-art .character-placeholder {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    margin: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    color: #6b5a30;
+}
+
+/* Insignias redondas sobre la imagen */
+.card-art .stat {
+    position: absolute;
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.card-art .stat-life {
+    top: 6px;
+    right: 6px;
+}
+
+.card-art .stat-def {
+    bottom: 6px;
+    left: 6px;
+}
+
+.card-art .stat-dmg {
+    bottom: 6px;
+    right: 6px;
+}
+
+/* Barra de vida, nombre y etiquetas debajo de la imagen */
+.character-card .health-bar {
+    height: 6px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.character-card h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.6em;
+    margin: 0;
+    padding: 4px 6px;
+    font-size: 13px;
+}
+
+.card-tags {
+    margin: 0;
+    padding: 0 4px 6px;
+}
+
+/* Tamaño de las cartas */
+.battle-row {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.private-preparation .character-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+@media (max-width: 750px) {
+
+    .card-art .stat {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .character-card h4 {
+        font-size: 11px;
+        padding: 3px 3px;
+    }
+
+    .character-card .card-art .character-placeholder {
+        font-size: 40px;
+    }
+}
+
+
+/* ==============================
+   PANTALLA INICIAL: REGLAS A LA IZQUIERDA, INICIAR A LA DERECHA
+============================== */
+
+.intro-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.rules-panel {
+    background-color: #111111;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: left;
+}
+
+.rules-panel h2 {
+    margin-bottom: 15px;
+}
+
+.rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rules-list li {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 14px;
+    border-left: 2px solid #a88742;
+}
+
+.rules-list strong {
+    color: #d4af55;
+}
+
+.start-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+@media (max-width: 750px) {
+
+    .intro-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* En celular, el botón de iniciar aparece primero */
+    .start-panel {
+        order: -1;
+    }
+}

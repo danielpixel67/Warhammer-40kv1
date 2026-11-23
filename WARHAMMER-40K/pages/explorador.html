@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explorador de Facciones | Archives of the Imperium</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/facciones.css">
+</head>
+
+<body class="explorer-page">
+
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="../index.html" class="logo">
+                ✠ ARCHIVOS <span>DEL IMPERIO</span>
+            </a>
+
+            <a href="../index.html" class="back-link">
+                ← VOLVER AL INICIO
+            </a>
+
+        </nav>
+    </header>
+
+
+    <main class="container explorer-container">
+
+        <!-- PRESENTACIÓN -->
+
+        <section class="explorer-heading">
+
+            <p class="eyebrow">BASE DE DATOS GALÁCTICA</p>
+
+            <h1>EXPLORADOR DE FACCIONES</h1>
+
+            <p>
+                Consulta los registros de las fuerzas que combaten
+                por el destino de la galaxia.
+            </p>
+
+        </section>
+
+
+        <!-- SELECCIÓN DE ALIANZA -->
+
+        <section class="alliance-section">
+
+            <h2>SELECCIONA TU ALIANZA</h2>
+
+            <div class="alliance-grid">
+
+                <button class="alliance-button imperial-button"
+                        data-alliance="imperio">
+
+                    <span class="alliance-icon">✠</span>
+
+                    <strong>IMPERIO</strong>
+
+                    <small>Defensores de la humanidad</small>
+
+                </button>
+
+
+                <button class="alliance-button chaos-button"
+                        data-alliance="caos">
+
+                    <span class="alliance-icon">☠</span>
+
+                    <strong>CAOS</strong>
+
+                    <small>Servidores de la disformidad</small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATÁLOGO -->
+
+        <section class="catalog-section" id="catalog">
+
+            <div class="catalog-heading">
+
+                <div>
+                    <p class="eyebrow">ARCHIVOS DISPONIBLES</p>
+                    <h2 id="catalogTitle">TODAS LAS FACCIONES</h2>
+                </div>
+
+                <span id="factionCount">6 REGISTROS</span>
+
+            </div>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="search-container">
+
+                <label for="factionSearch">
+                    BUSCAR FACCIÓN
+                </label>
+
+                <input
+                    type="search"
+                    id="factionSearch"
+                    placeholder="Ej: Ultramarines..."
+                >
+
+            </div>
+
+
+            <!-- TARJETAS GENERADAS POR JAVASCRIPT -->
+
+            <div class="faction-list" id="factionList">
+
+                <!-- Aquí JavaScript generará las tarjetas -->
+
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                No se encontraron facciones con ese nombre.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="container">
+            <p>ARCHIVOS DEL IMPERIO</p>
+            <small>Proyecto académico no oficial de Warhammer 40,000.</small>
+        </div>
+
+    </footer>
+
+
+    <script src="../js/facciones.js"></script>
+
+</body>
+</html>

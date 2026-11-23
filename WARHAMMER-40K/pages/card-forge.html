@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Card Forge: combate de cartas en el universo Warhammer 40K.">
+
+    <title>Card Forge | Warhammer 40K</title>
+
+    <link rel="stylesheet" href="../css/card-forge.css">
+
+    <script src="../js/card-forge.js" defer></script>
+</head>
+
+<body>
+
+    <header class="card-header">
+        <h1>CARD FORGE</h1>
+        <p>EL CAMPO DE BATALLA TE ESPERA</p>
+
+        <a href="../index.html">VOLVER AL INICIO</a>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN DEL JUEGO -->
+        <section class="game-intro">
+
+            <div class="intro-layout">
+
+                <!-- IZQUIERDA: REGLAS -->
+                <div class="rules-panel">
+                    <h2>REGLAS</h2>
+
+                    <ul class="rules-list">
+                        <li>
+                            <strong>Ejércitos:</strong> cada jugador elige una
+                            facción y recibe 6 personajes al azar: 3 salen al
+                            campo y 3 esperan en la reserva.
+                        </li>
+                        <li>
+                            <strong>Turnos:</strong> en tu turno eliges de 1 a 3
+                            personajes para atacar. Cada uno ataca una vez.
+                        </li>
+                        <li>
+                            <strong>Daño:</strong> el golpe quita el daño del
+                            atacante menos la defensa del objetivo (mínimo 3).
+                        </li>
+                        <li>
+                            <strong>Bajas:</strong> si un personaje cae, entra
+                            otro de la reserva. Gana quien elimine a todo el
+                            ejército rival.
+                        </li>
+                        <li>
+                            <strong>Habilidades:</strong> se usan en lugar del
+                            ataque normal. Curar, área, doble golpe y perforar
+                            tienen un solo uso.
+                        </li>
+                        <li>
+                            <strong>Sellos:</strong> el personaje sellado no puede
+                            actuar durante 2 turnos. El sello se rompe si matas al
+                            que lo puso, y el sellador debe esperar 3 turnos para
+                            volver a usarlo.
+                        </li>
+                        <li>
+                            <strong>Pasivas:</strong> están siempre activas
+                            (reflejo, regeneración, furia, cura por baja...).
+                        </li>
+                        <li>
+                            <strong>Importante:</strong> tras cada turno se pasa
+                            el computador. No muestres tus cartas de reserva al
+                            rival.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- DERECHA: INICIAR -->
+                <div class="start-panel">
+                    <h2>PREPARA TU EJÉRCITO</h2>
+
+                    <p>
+                        Elige tu facción, reúne a tus personajes
+                        y prepárate para combatir.
+                    </p>
+
+                    <button id="startGameButton">
+                        COMENZAR PARTIDA
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- AQUÍ SE DESARROLLARÁ LA SELECCIÓN DE FACCIONES -->
+        <section id="factionSelection">
+        </section>
+
+        <!-- AQUÍ SE DESARROLLARÁ EL CAMPO DE BATALLA -->
+        <section id="battleField">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>WARHAMMER 40,000 - CARD FORGE</p>
+    </footer>
+
+</body>
+</html>
